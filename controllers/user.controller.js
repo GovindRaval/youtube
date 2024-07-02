@@ -16,7 +16,7 @@ const registerUser = asyncHandler(async (req, res) => {
     //return Response
 
     const { fullname, email, username, password } = req.body
-    console.log(fullname, email);
+
 
     if ([username, fullname, email, password].some((field) =>
         field?.trim() === ""
@@ -71,4 +71,11 @@ const registerUser = asyncHandler(async (req, res) => {
 
 })
 
-export { registerUser }
+const loginUser = asyncHandler(async (req, res) => {
+    //get data from req body
+    //validation 
+    //check password
+    //acces and refresh token
+    //send cookie 
+})
+export { registerUser, loginUser }
